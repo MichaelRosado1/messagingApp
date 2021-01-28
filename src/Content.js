@@ -5,7 +5,6 @@ import ChatArea from './ChatArea';
 function Content() {
     return (
         <div>
-            <p>some paragraph</p>
             <ChatArea />
         </div>
     )
