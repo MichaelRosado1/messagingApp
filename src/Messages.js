@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 function Messages({ messages }) {
+    const [currentMessages, setcurrentMessages] = useState(['hello', 'hey, whats up', 'nothing much!']);
+
     return (
         <div>
-            {messages === undefined ? 
-             <p>nothing to show yet</p>
-            : messages.map((message) => {
-                <li>message: {message}</li>
-            })}
+            <ul>
+                {
+                    currentMessages.map((message) => {
+                        return (
+                            <li key="">{message}</li>
+                        )
+                    })
+                }
+            </ul>
         </div>
         
     )
